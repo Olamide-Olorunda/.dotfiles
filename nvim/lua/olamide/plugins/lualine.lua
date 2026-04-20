@@ -5,7 +5,7 @@ return {
     config = function()
         require('lualine').setup({
             options = {
-                theme = 'rose-pine', -- Forces the bar to match our colorscheme
+                theme = 'auto', -- Forces the bar to match our colorscheme
                 icons_enabled = true,
                 component_separators = '|',
                 section_separators = '',
