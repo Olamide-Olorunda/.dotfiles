@@ -1,6 +1,5 @@
 return {
     'nvim-telescope/telescope.nvim',
-    tag = '0.1.8',
     dependencies = { 'nvim-lua/plenary.nvim' },
     config = function()
         local builtin = require('telescope.builtin')
@@ -15,7 +14,7 @@ return {
         end)
         -- help page: see all available telescope commands
         vim.keymap.set('n', '<leader>vh', builtin.help_tags, {})
-        -- to search for folders only 
+        -- to search for folders only
         vim.keymap.set('n', '<leader>fd', function()
             require('telescope.builtin').find_files({
                 prompt_title = "Browse Folders",

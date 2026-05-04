@@ -18,11 +18,11 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- System clipboard sync (Copy to Mac clipboard so you can paste in Firefox/Obsidian)
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 -- Delete to void register (Doesn't overwrite your copy buffer)
-vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
+vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 -- Escape with Ctrl-c
 vim.keymap.set("i", "<C-c>", "<Esc>")
@@ -30,6 +30,7 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 -- Disable Q (The most annoying key in Vim)
 vim.keymap.set("n", "Q", "<nop>")
 
+vim.opt.undodir = vim.fn.expand("~/.nvim/undodir")
 -- ---------------------------------------------------------------------
 -- The Universal Code Runner
 -- ---------------------------------------------------------------------
@@ -39,8 +40,8 @@ vim.keymap.set("n", "<leader>r", function()
     vim.cmd("w")
 
     -- 2. Get information about the current file
-    local ft = vim.bo.filetype       -- e.g., "python", "cpp"
-    local file = vim.fn.expand("%")  -- e.g., "main.cpp"
+    local ft = vim.bo.filetype         -- e.g., "python", "cpp"
+    local file = vim.fn.expand("%")    -- e.g., "main.cpp"
     local no_ext = vim.fn.expand("%<") -- e.g., "main"
 
     -- 3. Determine the terminal command based on the language
@@ -60,6 +61,11 @@ vim.keymap.set("n", "<leader>r", function()
         vim.notify("No run command configured for filetype: " .. ft, vim.log.levels.WARN)
         return
     end
+    vim.keymap.set("n", "<leader>r", function()
+        local file = vim.fn.expand("%")
+        local out = vim.fn.expand("%:r")
+        vim.cmd("!" .. "g++ " .. file .. " -o " .. out .. " && ./" .. out)
+    end, { desc = "Compile and run C++" })
 
     -- 4. Execute the command in a new split window
     -- Open split

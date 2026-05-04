@@ -1,0 +1,19 @@
+# --- Appearance ---
+theme = Gruvbox Material Dark
+font-family = "JetBrainsMono Nerd Font"
+font-size = 13
+
+# --- Window Decor ---
+window-decoration = false
+window-padding-x = 10
+window-padding-y = 10
+background-opacity = 0.95
+background-blur-radius = 20
+
+# --- Tab Bar ---
+window-save-state = always
+
+# cursor
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor
