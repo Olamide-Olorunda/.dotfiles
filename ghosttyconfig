@@ -4,7 +4,7 @@ font-family = "JetBrainsMono Nerd Font"
 font-size = 13
 
 # --- Window Decor ---
-window-decoration = false
+window-decoration = true
 window-padding-x = 10
 window-padding-y = 10
 background-opacity = 0.95
