@@ -1,19 +1,23 @@
-# --- Appearance ---
+# terminal appearance
 theme = Gruvbox Material Dark
-font-family = "JetBrainsMono Nerd Font"
-font-size = 13
+font-family = "Cohere Mono"
+font-size = 14
 
-# --- Window Decor ---
+# window
+macos-titlebar-style = hidden
+macos-titlebar-proxy-icon = hidden
 window-decoration = true
 window-padding-x = 10
 window-padding-y = 10
-background-opacity = 0.95
+background-opacity = 1
 background-blur-radius = 20
 
 # --- Tab Bar ---
 window-save-state = always
 
-# cursor
+# cursor and shell
 cursor-style = block
 cursor-style-blink = false
 shell-integration-features = no-cursor
+cursor-click-to-move = true
+clipboard-read=allow
