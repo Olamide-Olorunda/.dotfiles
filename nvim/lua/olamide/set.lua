@@ -13,9 +13,9 @@ vim.opt.smartindent = true
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
--- Aesthetics & UI
-vim.opt.termguicolors = true -- Makes colors look elite on your Retina display
-vim.opt.scrolloff = 10       -- Keeps 10 lines visible above/below cursor
+vim.opt.clipboard = "unnamedplus"
+vim.opt.termguicolors = true
+vim.opt.scrolloff = 10 -- Keeps 10 lines visible above/below cursor
 vim.opt.sidescrolloff = 10
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
