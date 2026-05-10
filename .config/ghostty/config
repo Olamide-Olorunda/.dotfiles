@@ -1,0 +1,45 @@
+# terminal appearance
+theme = Vague
+font-family = "Cohere Mono"
+font-size = 14
+background = 000000
+
+# window
+
+macos-titlebar-style = hidden
+
+macos-titlebar-proxy-icon = hidden
+
+window-decoration = true
+
+window-padding-x = 10
+
+window-padding-y = 10
+
+background-opacity = 1
+
+background-blur-radius = 20
+
+window-colorspace = "display-p3"
+
+
+keybind = super+e=new_split:down
+keybind = super+p=goto_split:previous
+keybind = super+l=goto_split:next
+
+window-save-state = always
+
+# cursor and shell
+
+cursor-style = block
+
+cursor-style-blink = false
+
+shell-integration-features = no-cursor
+
+cursor-click-to-move = true
+
+clipboard-read=allow
+
+clipboard-write=allow
+

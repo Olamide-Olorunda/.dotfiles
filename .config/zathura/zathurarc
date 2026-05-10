@@ -1,0 +1,11 @@
+# Enable system clipboard
+set selection-clipboard clipboard
+
+# Dark mode configuration (press 'Ctrl-r' to toggle recoloring in-app)
+set recolor true
+set recolor-darkcolor "#DCD7BA"
+set recolor-lightcolor "#1F1F28"
+
+# Smooth scrolling
+set scroll-step 50
+
