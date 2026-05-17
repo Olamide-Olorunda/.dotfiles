@@ -1,31 +1,54 @@
-vim.opt.nu = true
-vim.opt.relativenumber = true -- This is huge for jumping lines quickly
+vim.opt.number = true
+vim.opt.relativenumber = true
 
--- Tab / Indentation (Standard for JS/Python)
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
+vim.opt.encoding = "utf-8"
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
+vim.opt.autoindent = true
+vim.opt.wrap = false
 
 vim.opt.smartindent = true
 
--- Search behavior
+vim.opt.guicursor =
+"n-v-c:block,i-ci-ve:block,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
+
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
-vim.opt.clipboard = "unnamedplus"
+vim.schedule(function()
+  vim.opt.clipboard = "unnamedplus"
+end)
+-- vim.opt.clipboard = "unnamedplus"
 vim.opt.termguicolors = true
-vim.opt.scrolloff = 10 -- Keeps 10 lines visible above/below cursor
+vim.opt.scrolloff = 10
 vim.opt.sidescrolloff = 10
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+-- vim.opt.selection = "inclusive"
+vim.opt.autochdir = false
 
-vim.opt.updatetime = 50
+vim.opt.splitright = true
+vim.opt.splitbelow = true
 
--- Undo history (saves even after you close nvim)
-vim.opt.undodir = os.getenv("HOME") .. "~/.vim/undodir"
+vim.opt.cursorline = true
+vim.opt.updatetime = 300
+
+local undodir = vim.fn.expand("~/.vim/undodir")
+if
+    vim.fn.isdirectory(undodir) == 0
+then
+  vim.fn.mkdir(undodir, "p")
+end
+
+vim.opt.backup = false
+vim.opt.writebackup = false
+vim.opt.swapfile = false
 vim.opt.undofile = true
+vim.opt.undodir = undodir
+vim.opt.autoread = true
 
 vim.opt.showmatch = true
