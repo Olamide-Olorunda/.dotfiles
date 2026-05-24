@@ -1,6 +1,6 @@
 # terminal appearance
 theme = Vague
-font-family = "Cohere Mono"
+font-family = "Andale Mono"
 font-size = 14
 background = 000000
 
