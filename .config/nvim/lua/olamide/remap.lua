@@ -1,7 +1,6 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
--- The "Primeagen Specials"
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
@@ -36,33 +35,33 @@ vim.opt.undofile = false
 -- The Universal Code Runner
 -- ---------------------------------------------------------------------
 vim.keymap.set("n", "<leader>r", function()
-    local ft = vim.bo.filetype
-    local file = vim.fn.expand("%:p")   -- full path
-    local no_ext = vim.fn.expand("%:p:r")
+  local ft = vim.bo.filetype
+  local file = vim.fn.expand("%:p")   -- full path
+  local no_ext = vim.fn.expand("%:p:r")
 
-    local cmd = ""
-    if ft == "python" then
-        cmd = "python3 " .. file
-    elseif ft == "javascript" then
-        cmd = "node " .. file
-    elseif ft == "cpp" then
-        cmd = "clang++ -std=c++17 " .. file .. " -o " .. no_ext .. " && " .. no_ext
-    elseif ft == "c" then
-        cmd = "clang " .. file .. " -o " .. no_ext .. " && " .. no_ext
-    elseif ft == "lua" then
-        cmd = "lua " .. file
-    else
-        vim.notify("No run command for filetype: " .. ft, vim.log.levels.WARN)
-        return
-    end
+  local cmd = ""
+  if ft == "python" then
+    cmd = "python3 " .. file
+  elseif ft == "javascript" then
+    cmd = "node " .. file
+  elseif ft == "cpp" then
+    cmd = "clang++ -std=c++17 " .. file .. " -o " .. no_ext .. " && " .. no_ext
+  elseif ft == "c" then
+    cmd = "clang " .. file .. " -o " .. no_ext .. " && " .. no_ext
+  elseif ft == "lua" then
+    cmd = "lua " .. file
+  else
+    vim.notify("No run command for filetype: " .. ft, vim.log.levels.WARN)
+    return
+  end
 
-    -- Save first (without undo complications)
+  -- Save first (without undo complications)
 
-    -- Run in a bottom split terminal
-    vim.cmd("botright split")
-    vim.cmd("resize 15")
-    vim.cmd("term " .. cmd)
-    vim.cmd("startinsert")
+  -- Run in a bottom split terminal
+  vim.cmd("botright split")
+  vim.cmd("resize 15")
+  vim.cmd("term " .. cmd)
+  vim.cmd("startinsert")
 end, { desc = "Run current file" })
 
 -- Exit terminal mode with Escape
