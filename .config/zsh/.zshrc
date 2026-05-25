@@ -20,6 +20,8 @@ alias gitpom="git push origin main"
 alias gits="git status"
 alias nv="nvim ."
 alias gitt="gita && gitc && gitpom"
+alias configg="config add ~/.config && config commit -m 'new add' && config push origin master"
+
 
 eval "$(starship init zsh)"
 precmd_functions+=(set_block_cursor)
