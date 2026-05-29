@@ -1,3 +1,3 @@
 # my terminal configuration
 
-![Screenshot](rice.png)
+![Screenshot](newRice.png)
