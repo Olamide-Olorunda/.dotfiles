@@ -22,6 +22,16 @@ alias nv="nvim ."
 alias gitt="gita && gitc && gitpom"
 alias configg="config add ~/.config && config commit -m 'new add' && config push origin master"
 
+alias work="timer 60m && terminal-notifier -message 'Pomodoro'\
+        -title 'Work Timer is up! Take a Break 😊'\
+        -ignoreDnD
+        -sound Crystal"
+
+alias rest="timer 10m && terminal-notifier -message 'Pomodoro'\
+        -title 'Break is over! Get back to work 😬'\
+        -ignoreDnD
+        -sound Crystal"
+
 
 eval "$(starship init zsh)"
 precmd_functions+=(set_block_cursor)
