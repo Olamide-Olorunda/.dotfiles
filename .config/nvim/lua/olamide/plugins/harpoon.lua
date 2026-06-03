@@ -14,10 +14,10 @@ return {
 
     vim.keymap.set("n", "<leader>a", mark.add_file)
 
-    -- Ctrl + e: View all your currently Harpooned files
+    --Ctrl + e: view all Harpooned files
     vim.keymap.set("n", "<C-e>", ui.toggle_quick_menu)
 
-    -- Ctrl + h/t/n/s: Jump directly to file 1, 2, 3, or 4 on the Harpoon list
+    -- Ctrl + h/t/n/s: jump directly to file 1, 2, 3, or 4 on the Harpoon list
     vim.keymap.set("n", "<C-h>", function() ui.nav_file(1) end)
     vim.keymap.set("n", "<C-t>", function() ui.nav_file(2) end)
     vim.keymap.set("n", "<C-n>", function() ui.nav_file(3) end)
