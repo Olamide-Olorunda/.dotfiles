@@ -20,7 +20,7 @@ alias gitpom="git push origin main"
 alias gits="git status"
 alias nv="nvim ."
 alias gitt="gita && gitc && gitpom"
-alias configg="config add ~/.config && config commit -m 'new add' && config push origin master"
+alias configg="config add ~/.config && config commit -m 'i am batman' && config push origin master"
 alias obs="cd ~/Library/Mobile\ Documents/iCLoud~md~obsidian/Documents/daini\ do\ nō && nvim"
 
 eval "$(starship init zsh)"
