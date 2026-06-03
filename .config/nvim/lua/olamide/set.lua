@@ -44,6 +44,7 @@ then
   vim.fn.mkdir(undodir, "p")
 end
 
+vim.opt.conceallevel = 1
 vim.opt.backup = false
 vim.opt.writebackup = false
 vim.opt.swapfile = false
