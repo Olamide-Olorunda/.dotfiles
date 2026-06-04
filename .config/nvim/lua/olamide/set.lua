@@ -31,6 +31,9 @@ vim.opt.smartcase = true
 -- vim.opt.selection = "inclusive"
 vim.opt.autochdir = false
 
+
+vim.opt.winborder = "rounded"
+
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
