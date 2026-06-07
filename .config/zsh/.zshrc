@@ -23,6 +23,7 @@ alias nv="nvim ."
 alias gitt="gita && gitc && gitpom"
 alias configg="config add ~/.config && config commit -m 'i am batman' && config push origin master"
 alias obs="cd ~/Library/Mobile\ Documents/iCLoud~md~obsidian/Documents/daini\ do\ nō && nvim"
+alias yz="yazi ~/Documents/eLibrary"
 
 eval "$(starship init zsh)"
 precmd_functions+=(set_block_cursor)
