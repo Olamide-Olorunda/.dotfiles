@@ -1,6 +1,6 @@
 [opener]
 pdf = [
-  { run = "zathura '$@'", desc = "Zathura", block = false }
+  { run = "zathura \"$@\"", desc = "Zathura", block = false }
 ]
 
 [open]
