@@ -10,6 +10,9 @@ zpptx() {
     local filename="${1%.*}.pdf"
     zathura "$filename"
 }
+
+#Aliases
+
 alias syncs="syncthing serve"
 alias dbs="cd keybr.com && DB_CL=sqlite npm start"
 alias gita="git add ."

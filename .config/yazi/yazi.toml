@@ -2,8 +2,12 @@
 pdf = [
   { run = "zathura \"$@\"", desc = "Zathura", block = false }
 ]
+epub = [
+  {run = "zathura \"$@\"", desc = "Zathura", block = false }
+]
 
 [open]
 rules = [
   { mime = "application/pdf", use = "pdf" },
+  { mime = "application/epub+zip", use = "epub" },
 ]
