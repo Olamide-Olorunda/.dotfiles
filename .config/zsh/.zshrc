@@ -5,10 +5,8 @@ zpptx() {
     fi
     
     echo "Converting $1 to PDF..."
-    # Use LibreOffice in headless mode to convert the file
     /Applications/LibreOffice.app/Contents/MacOS/soffice --headless --convert-to pdf "$1"
     
-    # Extract filename without extension and open the new PDF
     local filename="${1%.*}.pdf"
     zathura "$filename"
 }
