@@ -24,6 +24,11 @@ alias gitt="gita && gitc && gitpom"
 alias configg="config add ~/.config && config commit -m 'i am batman' && config push origin master"
 alias obs="cd ~/Library/Mobile\ Documents/iCLoud~md~obsidian/Documents/daini\ do\ nō && nvim"
 alias yz="yazi ~/Documents/eLibrary"
+alias zu="cp ~/.zshrc ~/.config/zsh/.zshrc"
+alias fonp="tailscale up && tailscale serve --bg 8000"
+alias endt="tailscale serve reset && tailscale down"
+
+
 
 eval "$(starship init zsh)"
 precmd_functions+=(set_block_cursor)
@@ -40,7 +45,9 @@ alias rest="timer 10m && terminal-notifier -message 'Pomodoro'\
         -ignoreDnD
         -sound Crystal"
 
+#eval "$(fzf --bash)"
 
+source <(fzf --zsh)
 
 export PATH="$HOME/.cargo/bin:$PATH"
 
