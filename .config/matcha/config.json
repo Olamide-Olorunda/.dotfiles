@@ -1,0 +1,14 @@
+{
+  "accounts": [
+    {
+      "id": "a9647a13-deb8-4b0d-ab94-19fd5baf579a",
+      "name": "Olamide",
+      "email": "olamideolorunda268@gmail.com",
+      "service_provider": "gmail",
+      "fetch_email": "olamideolorunda268@gmail.com",
+      "auth_method": "password",
+      "protocol": "imap",
+      "pop3_port": 995
+    }
+  ]
+}
