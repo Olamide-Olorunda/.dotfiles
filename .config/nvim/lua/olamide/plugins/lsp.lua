@@ -30,7 +30,7 @@ return {
 
     require('mason').setup({})
     require('mason-lspconfig').setup({
-      ensure_installed = { 'pyright', 'ts_ls', 'clangd', 'lua_ls', 'tailwindcss', 'eslint', 'html', 'cssls', 'jsonls' },
+      ensure_installed = { 'pyright', 'ts_ls', 'clangd', 'lua_ls', 'tailwindcss', 'eslint', 'html', 'cssls', 'jsonls', 'tinymist' },
       handlers = {
         lsp.default_setup,
       },
