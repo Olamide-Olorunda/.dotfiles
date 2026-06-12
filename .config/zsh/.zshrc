@@ -28,6 +28,8 @@ alias zu="cp ~/.zshrc ~/.config/zsh/.zshrc"
 alias fonp="tailscale up && tailscale serve --bg 8000"
 alias endt="tailscale serve reset && tailscale down"
 
+alias work="countdown 60m"
+alias rest="countdown 5m"
 
 
 eval "$(starship init zsh)"
