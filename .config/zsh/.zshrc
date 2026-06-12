@@ -34,17 +34,6 @@ eval "$(starship init zsh)"
 precmd_functions+=(set_block_cursor)
 set_block_cursor() { printf '\033[2 q'; }
 
-
-alias work="timer 60m && terminal-notifier -message 'Pomodoro'\
-        -title 'Work Timer is up! Take a Break 😊'\
-        -ignoreDnD
-        -sound Crystal"
-
-alias rest="timer 10m && terminal-notifier -message 'Pomodoro'\
-        -title 'Break is over! Get back to work 😬'\
-        -ignoreDnD
-        -sound Crystal"
-
 #eval "$(fzf --bash)"
 
 source <(fzf --zsh)
