@@ -51,16 +51,14 @@ return {
         ['<C-y>'] = cmp.mapping.confirm({ select = true }),
         ['<C-Space>'] = cmp.mapping.complete(),
       }),
-
-      sources = cmp.config,
-      sources({
+      -- Bypassing the helper function with a standard array
+      sources = {
         { name = 'lazydev', group_index = 0 },
         { name = 'nvim_lsp' },
         { name = 'luasnip' },
-      }, {
         { name = 'buffer' },
         { name = 'path' },
-      })
+      }
     })
   end
 }
