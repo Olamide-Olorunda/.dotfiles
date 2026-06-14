@@ -20,13 +20,11 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 -- Delete to void register
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
--- Escape with Ctrl-c
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
 -- Disable Q
 vim.keymap.set("n", "Q", "<nop>")
 
--- Undo directory (fixed)
 vim.opt.undofile = true
 
 
