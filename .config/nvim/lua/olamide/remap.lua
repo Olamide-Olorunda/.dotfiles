@@ -27,7 +27,7 @@ vim.keymap.set("n", "Q", "<nop>")
 
 vim.opt.undofile = true
 
-
+-- typst preview with telescope ui.
 vim.keymap.set('n', '<leader>te', function()
   local formats = { "html", "svg", "png", "pdf" }
   vim.ui.select(formats, {
