@@ -13,10 +13,6 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- Paste over something without losing what you copied
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
--- System clipboard sync
-vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
-vim.keymap.set("n", "<leader>Y", [["+Y]])
-
 -- Delete to void register
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
