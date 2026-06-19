@@ -7,6 +7,10 @@ if not vim.loop.fs_stat(lazypath) then
     "https://github.com/folke/lazy.nvim.git",
     "--branch=stable",
     lazypath,
+
+    rocks = {
+      hererocks = true,
+    },
   })
 end
 vim.opt.rtp:prepend(lazypath)
