@@ -56,3 +56,12 @@ vim.opt.undodir = undodir
 vim.opt.autoread = true
 
 vim.opt.showmatch = true
+
+--spell checking for my markdown files
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "markdown", "txt", "env" },
+  callback = function()
+    vim.opt.spelllang = "en_us"
+    vim.opt.spell = true
+  end,
+})
