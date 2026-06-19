@@ -3,7 +3,7 @@ return {
   event = "VeryLazy",
   opts = {
     backend = "kitty",
-    processor = "magick_cli",
+    processor = "magick_rock",
     integrations = {
       markdown = {
         enabled = true,
