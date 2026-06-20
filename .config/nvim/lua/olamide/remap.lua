@@ -46,7 +46,23 @@ vim.keymap.set('n', '<leader>te', function()
   end)
 end, { desc = "Typst: Select Export Format" })
 
+vim.keymap.set("n", "<leader>tp", ":TypstPreview<CR>", { desc = "Typst: Start Live Preview" })
 
+vim.keymap.set("n", "<leader>ts", ":TypstPreviewStop<CR>", { desc = "Typst: Stop Live Preview" })
+
+-- Typst + Zathura Live Preview
+vim.keymap.set("n", "<leader>tz", function()
+  local typst_file = vim.fn.expand("%:p")
+  local pdf_file = vim.fn.expand("%:p:r") .. ".pdf"
+
+  os.execute("typst compile " .. typst_file)
+
+  vim.fn.jobstart({ "typst", "watch", typst_file })
+
+  vim.fn.jobstart({ "zathura", pdf_file })
+
+  vim.notify("Typst Watcher & Zathura Started!", vim.log.levels.INFO)
+end, { desc = "Typst: Zathura Live Preview" })
 -- the universal code runner
 vim.keymap.set("n", "<leader>r", function()
   local ft = vim.bo.filetype
