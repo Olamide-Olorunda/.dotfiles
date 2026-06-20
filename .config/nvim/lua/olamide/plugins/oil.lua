@@ -1,30 +1,30 @@
--- return {
---   'stevearc/oil.nvim',
---   ---@module 'oil'
---   ---@type oil.SetupOpts
---   opts = {
---     default_file_explorer = false,
---     lsp_file_methods = {
---       enabled = true,
---       timeout_ms = 1000,
---       autosave_changes = true,
---     },
---     columns = {
---       "icon",
---     },
---     float = {
---       max_width = 0.3,
---       max_height = 0.6,
---       border = "rounded",
---     },
---   },
---   keys = {
---     { "<leader>e", "<CMD>Oil --float<CR>", desc = "Open Oil file explorer in floating window" },
---   },
---   lazy = false,
---   init = function()
---     vim.api.nvim_create_user_command('Ex', 'Explore', {})
---     vim.api.nvim_create_user_command('Sex', 'Sexplore', {})
---     vim.api.nvim_create_user_command('Vex', 'Vexplore', {})
---   end,
--- }
+return {
+  'stevearc/oil.nvim',
+  ---@module 'oil'
+  ---@type oil.SetupOpts
+  opts = {
+    default_file_explorer = false,
+    lsp_file_methods = {
+      enabled = true,
+      timeout_ms = 1000,
+      autosave_changes = true,
+    },
+    columns = {
+      "icon",
+    },
+    float = {
+      max_width = 0.3,
+      max_height = 0.6,
+      border = "rounded",
+    },
+  },
+  keys = {
+    { "<leader>e", "<CMD>Oil --float<CR>", desc = "Open Oil file explorer in floating window" },
+  },
+  lazy = false,
+  init = function()
+    vim.api.nvim_create_user_command('Ex', 'Explore', {})
+    vim.api.nvim_create_user_command('Sex', 'Sexplore', {})
+    vim.api.nvim_create_user_command('Vex', 'Vexplore', {})
+  end,
+}
