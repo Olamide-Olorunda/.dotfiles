@@ -22,9 +22,9 @@ return {
     local lsp = require('lsp-zero')
 
     lsp.on_attach(function(client, bufnr)
-      -- K: Hover to see documentation
-      -- gd: Go to definition
-      -- [d / ]d: Jump to next/previous error
+      -- K: hover to see documentation
+      -- gd: go to definition
+      -- [d / ]d: jump to next/previous error
       lsp.default_keymaps({ buffer = bufnr })
     end)
 
@@ -51,7 +51,7 @@ return {
         ['<C-y>'] = cmp.mapping.confirm({ select = true }),
         ['<C-Space>'] = cmp.mapping.complete(),
       }),
-      -- Bypassing the helper function with a standard array
+      -- bypassing the helper function with a standard array
       sources = {
         { name = 'lazydev', group_index = 0 },
         { name = 'nvim_lsp' },
