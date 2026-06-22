@@ -1,2 +1,2 @@
 require("olamide")
-require("olamide.colorscheme")
+vim.cmd.colorscheme("moonfly")
