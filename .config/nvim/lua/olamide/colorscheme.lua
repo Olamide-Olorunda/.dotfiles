@@ -11,24 +11,29 @@ local colors = {
   bg = "NONE",
   fg = "#e0e0e0",
   white = "#ffffff",
-  grey = "#888888",
+  light_grey = "#aaaaaa",
+  grey = "#666666",
   dark_grey = "#333333",
+  highlight = "#2b2b2b",
   obsidian_red = "#ff2e2e"
 }
 
 local highlights = {
-  -- Core UI (Preserving Transparency)
   Normal = { fg = colors.fg, bg = colors.bg },
   NormalFloat = { fg = colors.fg, bg = colors.bg },
-  LineNr = { fg = colors.dark_grey, bg = colors.bg },
-  CursorLine = { bg = "#1a1a1a" }, -- Very subtle dark row highlight
+  LineNr = { fg = colors.grey, bg = colors.bg },
+  CursorLine = { bg = colors.highlight },
   CursorLineNr = { fg = colors.white, bg = colors.bg, bold = true },
   VertSplit = { fg = colors.dark_grey, bg = colors.bg },
   SignColumn = { bg = colors.bg },
 
-  -- Minimalist Code/Text Syntax
+  Visual = { bg = "#444444" },
+  Search = { fg = colors.white, bg = "#555555", bold = true },
+  IncSearch = { fg = colors.white, bg = "#777777", bold = true },
+  MatchParen = { fg = colors.white, bg = colors.highlight, bold = true, underline = true },
+
   Comment = { fg = colors.grey, italic = true },
-  String = { fg = colors.fg },
+  String = { fg = colors.light_grey },
   Number = { fg = colors.white },
   Boolean = { fg = colors.white, bold = true },
   Keyword = { fg = colors.white, bold = true },
@@ -38,18 +43,13 @@ local highlights = {
   Identifier = { fg = colors.fg },
   Constant = { fg = colors.white, bold = true },
   Type = { fg = colors.white, bold = true },
-  Operator = { fg = colors.fg },
+  Operator = { fg = colors.light_grey },
 
-  -- Obsidian Red Accent for Links (Matching Screenshot 2026-06-22 at 16.45.50.jpg)
   Underlined = { fg = colors.obsidian_red, underline = true },
-  Directory = { fg = colors.white, bold = true }, -- For netrw/file trees
+  Directory = { fg = colors.white, bold = true },
 
-  -- Popups and Search
   Pmenu = { fg = colors.fg, bg = "#161616" },
-  PmenuSel = { fg = colors.bg, bg = colors.white },
-  Search = { fg = colors.bg, bg = colors.white },
-  IncSearch = { fg = colors.bg, bg = colors.white },
-  MatchParen = { fg = colors.white, bg = colors.dark_grey, bold = true },
+  PmenuSel = { fg = "#000000", bg = colors.white },
 }
 
 for group, styles in pairs(highlights) do
@@ -69,7 +69,6 @@ local links = {
   ["@property"] = "Identifier",
   ["@parameter"] = "Identifier",
 
-  -- Target URLs and Markdown links specifically to turn them Obsidian Red
   ["@text.uri"] = "Underlined",
   ["@text.reference"] = "Underlined",
   ["markdownUrl"] = "Underlined",
