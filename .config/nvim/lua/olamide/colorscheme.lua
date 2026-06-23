@@ -8,12 +8,12 @@ vim.o.termguicolors = true
 vim.g.colors_name = "obsidian_trans"
 
 local colors = {
-  bg = "NONE",             -- CRITICAL: Keeps your Ghostty transparency intact
-  fg = "#e0e0e0",          -- Main text color
-  white = "#ffffff",       -- Bright white for headers/highlights
-  grey = "#888888",        -- Comments and muted items
-  dark_grey = "#333333",   -- UI borders and line numbers
-  obsidian_red = "#ff2e2e" -- The sharp red link accent from your screenshot
+  bg = "NONE",
+  fg = "#e0e0e0",
+  white = "#ffffff",
+  grey = "#888888",
+  dark_grey = "#333333",
+  obsidian_red = "#ff2e2e"
 }
 
 local highlights = {
