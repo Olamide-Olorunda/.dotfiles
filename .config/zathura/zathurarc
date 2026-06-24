@@ -5,7 +5,6 @@ set recolor true
 set recolor-darkcolor "#FFFFFF"
 set recolor-lightcolor "#000000"
 #set default-bg rgba(0,0,0,0.7)
-
 # Transparency is now set using RGBA values (the 0.5 is 50% opacity)
 set highlight-active-color "rgba(255,255,255,0.5)"
 
