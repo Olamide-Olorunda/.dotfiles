@@ -43,7 +43,7 @@ return {
     },
     max_width = nil,
     max_height = nil,
-    max_width_window_percentage = nil,
+    max_width_window_percentage = 80,
     max_height_window_percentage = 50,
     scale_factor = 1.0,
     kitty_direct_chunk_size = 4096,
