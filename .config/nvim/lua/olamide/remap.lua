@@ -81,6 +81,8 @@ vim.keymap.set("n", "<leader>r", function()
     cmd = "clang " .. file .. " -o " .. no_ext .. " && " .. no_ext
   elseif ft == "lua" then
     cmd = "lua " .. file
+  elseif ft == "go" then
+    cmd = "go run " .. file
   elseif ft == "typst" then
     cmd = "typst compile " .. file
   else
