@@ -10,6 +10,12 @@ zpptx() {
     local filename="${1%.*}.pdf"
     zathura "$filename"
 }
+# completion options
+zstyle ':completion:*' menu select
+zstyle ':completion:*' special-dirs true
+
+#other options
+setopt append_history inc_append_history share_history
 
 #Aliases
 
