@@ -54,16 +54,24 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 alias config='/usr/bin/git --git-dir=/Users/syx/.dotfiles.git/ --work-tree=/Users/syx'
 
 # NVM lazy loading environment & aliases
+# NVM Lazy Loading Environment
 export NVM_DIR="$HOME/.nvm"
-lazy_nvm() {
-    unset -f nvm node npm npx
+
+_load_nvm() {
+    # Delete the placeholder functions so they don't loop
+    unfunction nvm node npm npx 2>/dev/null
+    
+    # Source NVM binaries safely
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
     [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 }
-alias nvm='lazy_nvm; nvm'
-alias node='lazy_nvm; node'
-alias npm='lazy_nvm; npm'
-alias npx='lazy_nvm; npx'
 
-# consolidated global path
+# Define the lazy triggers as standard zsh functions
+function nvm { _load_nvm; nvm "$@" }
+function node { _load_nvm; node "$@" }
+function npm { _load_nvm; npm "$@" }
+function npx { _load_nvm; npx "$@" }
+
+
+
 export PATH="$HOME/.cargo/bin:/opt/homebrew/bin:/Users/syx/Library/Python/3.13/bin:$PATH"
