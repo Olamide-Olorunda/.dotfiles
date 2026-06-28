@@ -14,6 +14,9 @@ zpptx() {
 zstyle ':completion:*' menu select
 zstyle ':completion:*' special-dirs true
 
+autoload -Uz tetriscurses
+alias tetris="tetriscurses"
+
 #other options
 setopt append_history inc_append_history share_history
 
@@ -55,11 +58,10 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 alias config='/usr/bin/git --git-dir=/Users/syx/.dotfiles.git/ --work-tree=/Users/syx'
 export PATH="/Users/syx/Library/Python/3.13/bin:$PATH"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+lazy_load() {
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+}
 
-export PATH="/opt/homebrew/bin:$PATH"
-
-# Created by `pipx` on 2026-06-13 08:46:11
-export PATH="$PATH:/Users/syx/.local/bin"
+export PATH="$HOME/.cargo/bin:/opt/homebrew/bin:/Users/syx/Library/Python/3.13/bin:$PATH"
