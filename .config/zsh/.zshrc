@@ -15,14 +15,13 @@ zpptx() {
 zstyle ':completion:*' menu select
 zstyle ':completion:*' special-dirs true
 
-# Native Tetris setup
 autoload -Uz tetriscurses
 alias tetris="tetriscurses"
 
 #other options
 setopt append_history inc_append_history share_history
 
-#Aliases
+#aliases
 alias syncs="syncthing serve"
 alias dbs="cd keybr.com && DB_CL=sqlite npm start"
 alias gita="git add ."
@@ -54,7 +53,7 @@ source <(fzf --zsh)
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 alias config='/usr/bin/git --git-dir=/Users/syx/.dotfiles.git/ --work-tree=/Users/syx'
 
-# NVM Lazy Loading Environment & Aliases
+# NVM lazy loading environment & aliases
 export NVM_DIR="$HOME/.nvm"
 lazy_nvm() {
     unset -f nvm node npm npx
@@ -66,5 +65,5 @@ alias node='lazy_nvm; node'
 alias npm='lazy_nvm; npm'
 alias npx='lazy_nvm; npx'
 
-# Consolidated Global Path
+# consolidated global path
 export PATH="$HOME/.cargo/bin:/opt/homebrew/bin:/Users/syx/Library/Python/3.13/bin:$PATH"
