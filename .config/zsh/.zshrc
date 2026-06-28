@@ -57,21 +57,8 @@ alias config='/usr/bin/git --git-dir=/Users/syx/.dotfiles.git/ --work-tree=/User
 # NVM Lazy Loading Environment
 export NVM_DIR="$HOME/.nvm"
 
-_load_nvm() {
-    # Delete the placeholder functions so they don't loop
-    unfunction nvm node npm npx 2>/dev/null
-    
-    # Source NVM binaries safely
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-}
-
-# Define the lazy triggers as standard zsh functions
-function nvm { _load_nvm; nvm "$@" }
-function node { _load_nvm; node "$@" }
-function npm { _load_nvm; npm "$@" }
-function npx { _load_nvm; npx "$@" }
-
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 
 export PATH="$HOME/.cargo/bin:/opt/homebrew/bin:/Users/syx/Library/Python/3.13/bin:$PATH"
