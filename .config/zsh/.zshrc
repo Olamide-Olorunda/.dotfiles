@@ -43,7 +43,7 @@ alias conf="cd .config && nvim ."
 alias work="countdown 60m"
 alias rest="countdown 5m"
 
-export PATH="$HOME/.config/emacs/bin:$PATH"
+export PATH="$HOME/.emacs.d/bin:$PATH"
 
 eval "$(starship init zsh)"
 precmd_functions+=(set_block_cursor)
