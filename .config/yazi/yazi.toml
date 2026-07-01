@@ -1,9 +1,9 @@
 [opener]
 pdf = [
-  { run = "zathura \"$@\"", desc = "Zathura", block = false }
+  { run = "open -a Zathura \"$@\"", desc = "Zathura", block = false }
 ]
 epub = [
-  {run = "zathura \"$@\"", desc = "Zathura", block = false }
+  {run = "open -a Zathura \"$@\"", desc = "Zathura", block = false }
 ]
 
 [open]
