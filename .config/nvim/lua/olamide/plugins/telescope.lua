@@ -17,7 +17,7 @@ return {
       }
     })
 
-    -- Safely load the extensions
+    -- safely load the extensions
     pcall(telescope.load_extension, 'fzf')
     pcall(telescope.load_extension, 'ui-select')
 
@@ -34,10 +34,10 @@ return {
       })
     end, { desc = "Telescope: Search for folders only" })
 
-    -- Added for C/C++/Go Workflows
-    vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = 'Telescope: Live grep across project' })
-    vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = 'Telescope: Grep word under cursor' })
-    vim.keymap.set('n', '<leader>sb', builtin.buffers, { desc = 'Telescope: Find open buffers' })
-    vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = 'Telescope: Workspace diagnostics' })
+    -- added for C/C++/Go Workflows
+    vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = 'Telescope: Live grep across project folder.' })
+    vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = 'Telescope: Grep word directly under cursor' })
+    vim.keymap.set('n', '<leader>sb', builtin.buffers, { desc = 'Telescope: Find all open buffers' })
+    vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = 'Telescope: In-Workspace diagnostics' })
   end
 }
