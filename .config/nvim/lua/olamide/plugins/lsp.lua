@@ -14,7 +14,7 @@ return {
     { 'L3MON4D3/LuaSnip' },
     { 'rafamadriz/friendly-snippets' },
     { "antosha417/nvim-lsp-file-operations", config = true },
-    { "folke/neodev.nvim",                   opts = {} },
+    -- { "folke/neodev.nvim",                   opts = {} },
   },
   config = function()
     require('luasnip.loaders.from_vscode').lazy_load()
