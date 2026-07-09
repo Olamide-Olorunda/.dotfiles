@@ -359,8 +359,8 @@ return {
                     end
                     return vim_item
                 end,
-            },
-        })
+          },
+      })
 
         -- NOTE: Ghost text stuff
         -- Only show ghost text at word boundaries, not inside keywords. Based on idea
