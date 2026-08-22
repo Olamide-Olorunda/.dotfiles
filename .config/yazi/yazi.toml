@@ -1,13 +1,10 @@
 [opener]
-pdf = [
-  { run = "open -a Zathura \"$@\"", desc = "Zathura", block = false }
-]
-epub = [
-  {run = "open -a Zathura \"$@\"", desc = "Zathura", block = false }
+zathura = [
+    { run = '/opt/homebrew/bin/zathura "$@"', orphan = true, desc = "Zathura" }
 ]
 
 [open]
-rules = [
-  { mime = "application/pdf", use = "pdf" },
-  { mime = "application/epub+zip", use = "epub" },
+prepend_rules = [
+    { mime = "application/pdf", use = "zathura" },
+    { url = "*.epub", use = "zathura" }
 ]

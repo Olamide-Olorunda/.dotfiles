@@ -39,6 +39,7 @@ alias zu="cp ~/.zshrc ~/.config/zsh/.zshrc"
 alias fonp="tailscale up && tailscale serve --bg 8000"
 alias endt="tailscale serve reset && tailscale down"
 alias conf="cd .config && nvim ."
+alias fs="fastfetch"
 
 alias work="countdown 60m"
 alias rest="countdown 5m"
@@ -64,3 +65,5 @@ export NVM_DIR="$HOME/.nvm"
 
 
 export PATH="$HOME/.cargo/bin:/opt/homebrew/bin:/Users/syx/Library/Python/3.13/bin:$PATH"
+export PATH="$HOME/.emacs.d/bin:$PATH"
+export ZATHURA_PLUGIN_PATH=$(brew --prefix zathura-pdf-mupdf)/lib/zathura
