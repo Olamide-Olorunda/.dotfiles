@@ -67,3 +67,7 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$HOME/.cargo/bin:/opt/homebrew/bin:/Users/syx/Library/Python/3.13/bin:$PATH"
 export PATH="$HOME/.emacs.d/bin:$PATH"
 export ZATHURA_PLUGIN_PATH=$(brew --prefix zathura-pdf-mupdf)/lib/zathura
+
+alias h='eval "$(horse)"'
+
+export PATH=$PATH:$(go env GOPATH)/bin
